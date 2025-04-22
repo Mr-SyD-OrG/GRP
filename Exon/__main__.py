@@ -757,7 +757,7 @@ if __name__ == "__main__":
     log.info("[ᴇxᴏɴ] →  sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
-    app = web.AppRunner(await web_server())
+    app = web.AppRunner(web_server())
     await app.setup()
     await web.TCPSite(app, "0.0.0.0", 8080).start()
     print("Web Response Is Running......🕸️")
