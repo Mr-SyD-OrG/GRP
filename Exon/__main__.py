@@ -24,7 +24,7 @@ from Exon import BOT_USERNAME, CERT_PATH
 from Exon import LOGGER as log
 from Exon import OWNER_ID, OWNER_USERNAME, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK
 from Exon import Abishnoi as pbot
-from Exon import StartTime, dispatcher, telethn, updater
+from Exon import StartTime, dispatcher, telethn, updater, web_server
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
