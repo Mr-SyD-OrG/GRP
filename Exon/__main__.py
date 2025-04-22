@@ -25,6 +25,7 @@ from Exon import LOGGER as log
 from Exon import OWNER_ID, OWNER_USERNAME, PORT, SUPPORT_CHAT, TOKEN, URL, WEBHOOK
 from Exon import Abishnoi as pbot
 from Exon import StartTime, dispatcher, telethn, updater, web_server
+from aiohttp import web
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
@@ -758,7 +759,7 @@ if __name__ == "__main__":
     telethn.start(bot_token=TOKEN)
     pbot.start()
     app = web.AppRunner(web_server())
-    await app.setup()
-    await web.TCPSite(app, "0.0.0.0", 8080).start()
+    app.setup()
+    web.TCPSite(app, "0.0.0.0", 8080).start()
     print("Web Response Is Running......🕸️")
     main()
